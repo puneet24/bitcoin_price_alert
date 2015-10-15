@@ -1,0 +1,25 @@
+html, body{
+  min-height: 100%;
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, #FF7765 ),
+      color-stop(1, #FF9061 )
+  );
+  background-image: -o-linear-gradient(top, #FF7765  0%, #FF9061  100%);
+  background-image: -moz-linear-gradient(top, #FF7765  0%, #FF9061  100%);
+  background-image: -webkit-linear-gradient(top, #FF7765  0%, #FF9061  100%);
+  background-image: -ms-linear-gradient(top, #FF7765  0%, #FF9061  100%);
+  background-image: linear-gradient(to top, #FF7765  0%, #FF9061  100%);
+  background-color: #FF7765;
+  /*background-image: -webkit-radial-gradient(0% bottom, rgba(73,98,220, 0.7) 0, rgba(73,98,220, 0) 60%), -webkit-radial-gradient(90% bottom, #4962dc 0, rgba(82, 63, 140, 0) 40%), -webkit-radial-gradient(50% top, rgba(231, 76, 60, 0.6) 0, rgba(231, 76, 60, 0) 85%), -webkit-radial-gradient(right top, #794aa2 0, rgba(121, 74, 162, 0) 57%);*/
+  /*background-image: radial-gradient(at 0 bottom, rgba(73,98,220, 0.7) 0, rgba(73,98,220, 0) 60%), radial-gradient(at 90% bottom, #4962dc 0, rgba(82, 63, 140, 0) 40%), radial-gradient(at 50% top, rgba(231, 76, 60, 0.6) 0, rgba(231, 76, 60, 0) 85%), radial-gradient(at right top, #794aa2 0, rgba(121, 74, 162, 0) 57%);*/
+
+  /*background-image: -webkit-radial-gradient(0% bottom, rgba(231, 76, 60, 0.2) 0, rgba(231, 76, 60, 0) 40%), -webkit-radial-gradient(90% bottom, #794aa2 0, rgba(82, 63, 140, 0) 40%), -webkit-radial-gradient(50% top, rgba(73, 98, 220, 0.6) 0, rgba(73, 98, 220, 0) 85%), -webkit-radial-gradient(right top, #523F8C 0, rgba(121, 74, 162, 0) 57%);*/
+  /*background-image: radial-gradient(at 0 bottom, rgba(231, 76, 60, 0.2) 0, rgba(231, 76, 60, 0) 40%), radial-gradient(at 90% bottom, #794aa2 0, rgba(82, 63, 140, 0) 40%), radial-gradient(at 50% top, rgba(73, 98, 220, 0.6) 0, rgba(73, 98, 220, 0) 85%), radial-gradient(at right top, #523F8C 0, rgba(121, 74, 162, 0) 57%);*/
+
+  background-size: auto, auto, 100% 1000px, 100% 1000px;
+  background-repeat: no-repeat;
+}
+    
