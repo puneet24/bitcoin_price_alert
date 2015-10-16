@@ -29,4 +29,10 @@ html, body{
   border-right: 0px;
   border-top: 0px;
 }
+
+.val{
+  font-weight: 3;
+  font-size: 3;
+  color: white;
+}
     
