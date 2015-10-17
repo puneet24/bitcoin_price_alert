@@ -22,6 +22,8 @@ html, body{
 
   background-size: auto, auto, 100% 1000px, 100% 1000px;
   background-repeat: no-repeat;
+  overflow-y: hidden; // hide vertical
+  overflow-x: hidden;
 }
 
 .val{
@@ -48,5 +50,11 @@ input {
     outline: 0;
     background: transparent;
     border-bottom: 2px solid white;
+}
+
+#footer {
+    position:fixed;
+    bottom:20;
+    left:2;
 }
     

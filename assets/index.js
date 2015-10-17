@@ -35,7 +35,7 @@ $('#submit').on('click',function(){
       });
     $('#notification_status').append('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><center><strong>Price Set!</strong> You will get Email when Bitcoin price set to <b>'+$('#price').val()+'</center></div>');
     $('#price').val("");
-    $('#price').val("");
+    $('#email').val("");
   }
   
 });
