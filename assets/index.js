@@ -20,6 +20,29 @@ appbase.streamDocument({
   console.log("streaming error: ", err);
 });
 
+$('#select_type').on('change',function(){
+  $('#lowerprice').removeAttr("readonly");
+  $('#upperprice').removeAttr("readonly");
+  $("#upperprice").val("");
+  $("#lowerprice").val("");
+  switch($('#select_type').val()){
+    case "range": break;
+    case "lessthan" : $("#lowerprice").val("0");
+                      $("#lowerprice").prop("readonly", true);
+                      break;
+    case "greaterthan" : $("#upperprice").val("1000");
+                         $("#upperprice").prop("readonly", true);
+                         break;
+    case "fixvalue" : $('#lowerprice').val($('#upperprce').val());
+                      $("#lowerprice").prop("readonly", true);
+  }
+});
+
+$('#upperprice').on('change',function(){
+  if($('#select_type').val() == "fixvalue")
+    $('#lowerprice').val($("#upperprice").val());
+});
+
 $('#submit').on('click',function(){
   $('.alert').remove();
   if($('#price').val() == "" || $('#email').val() == ""){
@@ -27,13 +50,14 @@ $('#submit').on('click',function(){
   }
   else{
     $.ajax({
-      url: "http://104.131.165.92:8080/alerting", 
+      url: "http://0.0.0.0:3000/alerting", 
       data: { 
-              "price": $('#price').val(), 
+              "lowerprice": $('#lowerprice').val(),
+              "upperprice": $('#upperprice').val(), 
               "email": $('#email').val()
           }   
       });
-    $('#notification_status').append('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><center><strong>Price Set!</strong> You will get Email when Bitcoin price set to <b>'+$('#price').val()+'</center></div>');
+    $('#notification_status').append('<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><center><strong>Price Set!</strong> You will get Email when Bitcoin price is in range : <b>'+$('#lowerprice').val()+' to '+$('#upperprice').val()+'</center></div>');
     $('#price').val("");
     $('#email').val("");
   }
