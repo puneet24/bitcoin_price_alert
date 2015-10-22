@@ -50,7 +50,7 @@ $('#submit').on('click',function(){
   }
   else{
     $.ajax({
-      url: "http://0.0.0.0:3000/alerting", 
+      url: "http://104.131.165.92:8080/alerting", 
       data: { 
               "lowerprice": $('#lowerprice').val(),
               "upperprice": $('#upperprice').val(), 
