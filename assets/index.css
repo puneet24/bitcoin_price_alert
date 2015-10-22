@@ -61,6 +61,7 @@ input {
 }
 
 #footer {
+    width: 100%;
     position:fixed;
     bottom:20;
     left:2;
